@@ -7,9 +7,49 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <div>
-      <h1>Olá mundo.</h1>
+    <nav class="navbar">
+      <div>
+        <img src="./img/logo.png" alt="logo" class="logo">
+        <p class="title">DevFreela</p>
+      </div>
+      <p class="link">Desenvolvido por: <a href="https://github.com/guilhermeCezario" target="_blank">Guilherme Cezário</a></p>
+    </nav>
+    <div class="container">
+      <div class="container-form">
+        <div class="container-input">
+          <div class="block-input">
+            <label for="horasDiarias">Tempo diário:</label>
+            <input type="number" id="horasDiarias" required min="0">
+          </div>
+
+          <div class="block-input">
+            <label for="diasEfetivos">Dias efetivos por semana:</label>
+            <input type="number" id="diasEfetivos" required min="1" max="7">
+          </div>
+
+          <div class="block-input">
+            <label for="diasFerias">Dias de férias pelo projeto:</label>
+            <input type="number" id="diasFerias" required min="0">
+          </div>
+
+          <div class="block-input">
+            <label for="valorProjeto">Valor total do projeto:</label>
+            <input type="number" id="valorProjeto" required min="0">
+          </div>
+        </div>
+        <div class="container-button">
+          <button type="button" id="buttonCalcular">Calcular</button>
+        </div>
+      </div>
+      <div class="container-information">
+        <div class="block-information">
+          <h1 class="title-information">DevFreela</h1>
+          <p class="text-information">Criado com o intuito de<br>te ajudar na hora<br>de você saber quanto está cobrando<br>por hora de desenvolvimento</p>
+        </div>
+        <p class="result">Valor por hora: <span id="valorHora">0</span></p>
+      </div>
     </div>
+
     <script src="./main.js"></script>
   </body>
 </html>
